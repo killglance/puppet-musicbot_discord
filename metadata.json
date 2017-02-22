@@ -1,0 +1,18 @@
+{
+  "name": "killglance-musicbot_discord",
+  "version": "0.1.1",
+  "author": "Jon Schulz",
+  "summary": "Module to install and manage Just-Some-Bots/MusicBot",
+  "license": "Apache-2.0",
+  "source": "https://github.com/killglance/puppet-musicbot_discord",
+  "project_page": "https://github.com/killglance/puppet-musicbot_discord",
+  "issues_url": "https://github.com/killglance/puppet-musicbot_discord/issues",
+  "dependencies": [
+    {
+      "name":"puppetlabs-stdlib","version_requirement":">= 1.0.0",
+      "name":"puppetlabs-apt", "version_requirement":">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+

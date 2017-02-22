@@ -84,7 +84,10 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
-  SHELL
-  config.vm.provision :shell, inline: puppet_ubuntu
+  config.vm.provision :bootstrap, :type => :shell, inline: puppet_ubuntu
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = 'manifests'
+    puppet.manifest_file = 'site.pp'
+  end
 
 end

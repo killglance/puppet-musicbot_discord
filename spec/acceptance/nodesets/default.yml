@@ -1,0 +1,10 @@
+HOSTS:
+  ubuntu-server-1404-x64:
+    roles:
+      - master
+    platform: ubuntu-1404-amd64
+    box: boxcutter/ubuntu1404
+    hypervisor: vagrant
+CONFIG:
+  type: foss
+  #log_level: verbose
