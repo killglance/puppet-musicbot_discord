@@ -26,11 +26,7 @@ RSpec.configure do |c|
     puppet_module_install(source: proj_root, module_name: 'musicbot_discord')
     hosts.each do |host|
       JSON.parse(File.read('metadata.json'))['dependencies'].each do |dependency|
-        install_puppet_module_via_pmt_on(
-            host,
-            :module_name => dependency['name'],
-            :version => dependency['version_requirement']
-        )
+        install_puppet_module_via_pmt_on(host, :module_name => dependency['name'].to_s)
       end
     end
   end

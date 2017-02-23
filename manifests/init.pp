@@ -45,6 +45,7 @@
 class musicbot_discord(
 
 ) inherits musicbot_discord::params {
+  include ::stdlib
 
   Class['::musicbot_discord::install'] -> Class['::musicbot_discord::config'] ~> Class['::musicbot_discord::service']
   contain musicbot_discord::install, musicbot_discord::config, musicbot_discord::service
