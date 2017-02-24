@@ -21,6 +21,7 @@ class musicbot_discord::params {
         'ppa:mc3man/trusty-media' => { },
         'ppa:chris-lea/libsodium' => { },
       }
+      $ppa_dep = { require => Package['software-properties-common'], }
     }
     'xenial': {
       $dist_deps = [
@@ -29,6 +30,7 @@ class musicbot_discord::params {
       $repos = {
         'ppa:mc3man/xerus-media' => {},
       }
+      $ppa_dep = { }
     }
     default: {
       fail("Distribution not supported: ${$::lsbdistcodename}")

@@ -42,11 +42,12 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class musicbot_discord(
+class musicbot_discord (
 
 ) inherits musicbot_discord::params {
   include ::stdlib
 
-  Class['::musicbot_discord::install'] -> Class['::musicbot_discord::config'] ~> Class['::musicbot_discord::service']
-  contain musicbot_discord::install, musicbot_discord::config, musicbot_discord::service
+  class { '::musicbot_discord::install': } ->
+    class { '::musicbot_discord::config': } ~>
+    class { '::musicbot_discord::service': }
 }

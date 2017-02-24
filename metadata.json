@@ -7,6 +7,15 @@
   "source": "https://github.com/killglance/puppet-musicbot_discord",
   "project_page": "https://github.com/killglance/puppet-musicbot_discord",
   "issues_url": "https://github.com/killglance/puppet-musicbot_discord/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "16.04"
+      ]
+    }
+  ],
   "dependencies": [
     {
       "name":"puppetlabs-stdlib",
