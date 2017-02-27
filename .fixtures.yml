@@ -1,4 +1,8 @@
 fixtures:
   forge_modules:
-    apt: 'puppetlabs/apt'
+    apt:
+      repo: 'puppetlabs/apt'
+      ref: '2.4.0'
+    inifile: 'puppetlabs/inifile'
     stdlib: 'puppetlabs/stdlib'
+    vcsrepo: 'puppetlabs/vcsrepo'

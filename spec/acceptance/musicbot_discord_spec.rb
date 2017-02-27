@@ -17,8 +17,12 @@ class { 'musicbot_discord': }
   end
 
   [
-      'software-properties-common',
       'build-essential',
+      'ffmpeg',
+      'git',
+      'libopus-dev',
+      'libffi-dev',
+      'libsodium-dev',
       'unzip',
   ].each do |pkg|
     describe package(pkg) do
@@ -33,6 +37,17 @@ class { 'musicbot_discord': }
   ].each do |repo|
     describe ppa(repo) do
       it { should be_enabled }
+    end
+  end
+
+  describe user('musicbot') do
+    it { should exist }
+  end
+
+  describe file('/opt/musicbot') do
+    it do
+      should be_directory
+      should be_owned_by 'musicbot'
     end
   end
 end

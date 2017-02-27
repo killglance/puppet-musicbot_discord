@@ -23,6 +23,7 @@ class { 'musicbot_discord': }
                 is_expected.to contain_apt__ppa(ppa).that_requires('Package[software-properties-common]')
               end
             end
+            it { is_expected.to contain_package('software-properties-common').with_ensure('present') }
           when 'xenial'
             it { is_expected.to contain_apt__ppa('ppa:mc3man/xerus-media') }
           else
